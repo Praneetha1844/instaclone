@@ -17,8 +17,10 @@ function Main() {
   return (
     <Router>
       <Routes>
-          <Route index element={<App />} />  {/* Default route */}
-          <Route path="explore" element={<ExplorePage />} />  {/* Explore route */}
+          <Route path="/" element={<Layout isCollapsed={isCollapsed} toggleSidebar={toggleSidebar} />} >
+            <Route index element={<App />} />  {/* Default route */}
+            <Route path="explore" element={<ExplorePage />} />  {/* Explore route */}
+          </Route>
       </Routes>
     </Router>
   );

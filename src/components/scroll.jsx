@@ -33,11 +33,15 @@ function ScrollableImageDiv() {
         {/* Images and Usernames */}
         {[...Array(10).keys()].map((i) => (
           <div key={i} className="flex flex-col items-center space-y-2">
-            <img
-              src={`https://via.placeholder.com/100?text=${i + 1}`}
-              alt={`Profile ${i + 1}`}
-              className="h-[60px] w-[60px] rounded-full border border-gray-300"
-            />
+            <div className="relative h-[60px] w-[60px] rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500  p-[2px]">
+              <div className="h-full w-full rounded-full bg-white flex items-center justify-center">
+                <img
+                  src={`https://via.placeholder.com/100?text=${i + 1}`}
+                  alt={`Profile ${i + 1}`}
+                  className="h-[54px] w-[54px] rounded-full"
+                />
+              </div>
+            </div>
             <span className="text-xs text-gray-500">
               Username{i + 1}
             </span>
