@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProfileCard({ profilePicture, profileName, username }) {
   return (
-    <div className="flex items-center justify-between bg-white p-4 w-full w-[315px] ">
+    <div className="flex items-center justify-between bg-white p-1 mb-[5px] w-[315px] ">
       {/* Profile Picture, Name, and Username */}
       <div className="flex items-center space-x-2">
         <img

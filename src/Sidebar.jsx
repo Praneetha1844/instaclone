@@ -14,7 +14,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             {/* Sidebar */}
             <div
                 className={`fixed ${isCollapsed ? 'w-[72px]' : 'w-1/6'
-                    } justify-center border border-grey transition-all duration-300 z-10 `}
+                    } justify-center border-r  border-grey transition-all duration-300 z-10 `}
             >
                 <img
                     src={isCollapsed ? "/logo.png" : "/Instagram_logo.svg.png"}

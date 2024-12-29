@@ -14,7 +14,7 @@ function App() {
       
 
       {/* Main Content Section */}
-      <div className="w-[700px] justify-center z-10 border border-black">
+      <div className="w-[700px] justify-center z-10 ">
         {/* Scrollable Image Section */}
       <div className="h-32 w-[700px] px-[42px] py-[25px]">
         <ScrollableImageDiv />
@@ -56,13 +56,17 @@ function App() {
       </div>
 
         {/* Profile Cards */}
-        <div className="  ml-[20px] px-[7px]  border border-black">
+        <div className=" w-[370px]  ml-[20px] px-[25px] mt-[6px] ">
           <div className="py-[20px]">
           <ProfileCard
             profilePicture="/img1.png"
             profileName="User1"
             username="1"
           />
+          <div className=" flex text-sm mt-[4px] mt-[10px] ">
+           <div className=" text-gray-400 mr-[100px] mt-[5px]  font-bold ">Suggested for you </div>
+           <div className=" text-xs ml-[20px] font-bold ">See All </div>
+           </div>
           </div>
           <ProfileCard
             profilePicture="/img2.png"
@@ -79,6 +83,13 @@ function App() {
             profileName="User4"
             username="4"
           />
+           <ProfileCard
+            profilePicture="/img5.png"
+            profileName="User5"
+            username="5"
+          />
+         <div className="mt-[70px] px-[9px] text-xs text-gray-400 ">About . Help . Press . API . Jobs . Privacy . Terms .</div>
+         <div className="mt-[7px] px-[9px] text-xs text-gray-400">Locations . Laguage . Meta Verified</div>
         </div>
     </div>
   );
