@@ -9,12 +9,17 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         console.log('Navigating to /explore'); // Check if this is printed in the console
         navigate('/explore'); 
       }; 
+      const handleNavigatee = () => {
+        console.log('Navigating to /'); // Check if this is printed in the console
+        navigate('/'); 
+      }; 
+
     return (
         <div className="relative">
             {/* Sidebar */}
             <div
                 className={`fixed ${isCollapsed ? 'w-[72px]' : 'w-1/6'
-                    } justify-center border-r  border-grey transition-all duration-300 z-10 `}
+                    } justify-center border-r  h-[1000px] transition-all duration-300 z-10 `}
             >
                 <img
                     src={isCollapsed ? "/logo.png" : "/Instagram_logo.svg.png"}
@@ -26,8 +31,9 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                         }`}
                 >
                     <div
-                        className={`m-2 flex py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''
+                        className={`m-2 flex py-2 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''
                             }`}
+                            onClick={handleNavigatee}
                     >
                         <img src="/home.png" alt="Home" className="h-6 w-6 ml-3 mr-4" />
                         {!isCollapsed && <span>Home</span>}
@@ -101,14 +107,20 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                         <img src="/profile.jpg" alt="Profile" className="h-6 w-6 ml-3 mr-4 rounded-full" />
                         {!isCollapsed && <span>Profile</span>}
                     </div>
-
+                     <div className="mt-9 h-[40px]"></div>
                     <div
-                        className={`m-2 flex py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''
-                            }`}
-                    >
-                        <img src="/profile.jpg" alt="AI Studio" className="h-6 w-6 ml-3 mr-4 rounded-full" />
+                        className={` mt-9 m-2 flex py-2 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${
+                            isCollapsed ? 'justify-center' : ''
+                        }`}
+                        >
+                        <img
+                            src="/profile.jpg"
+                            alt="AI Studio"
+                            className=" h-6 w-6 ml-3 mr-4 rounded-full"
+                        />
                         {!isCollapsed && <span>AI Studio</span>}
-                    </div>
+                        </div>
+
 
                     <div
                         className={`m-2 flex py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''
