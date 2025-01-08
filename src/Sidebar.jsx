@@ -14,6 +14,12 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         navigate('/'); 
       }; 
 
+      const handleNavigat = () => {
+        console.log('Navigating to /reels'); // Check if this is printed in the console
+        navigate('/reels'); 
+      }; 
+
+
     return (
         <div className="relative">
             {/* Sidebar */}
@@ -68,13 +74,20 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                         {!isCollapsed && <span>Explore</span>}
                     </button>
 
-                    <div
-                        className={`m-2 flex py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''
+                    <button
+                        className={`m-2 flex w-full py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : 'items-center'
                             }`}
+                        onClick={handleNavigat}
                     >
-                        <img src="/image.png" alt="Reels" className="h-6 w-6 ml-3 mr-4" />
+                        <img
+                            src="/image.png"
+                            alt="Reels"
+                            className="h-6 w-6 ml-3 mr-4"
+                        />
                         {!isCollapsed && <span>Reels</span>}
-                    </div>
+                    </button>
+
+                  
 
                     <div
                         className={`m-2 flex py-3 border border-white cursor-pointer hover:bg-gray-100 rounded-lg ${isCollapsed ? 'justify-center' : ''

@@ -4,7 +4,7 @@ import ScrollableImageDiv from './components/scroll';
 import ImagePost from './components/ImagePost';
 import ProfileCard from './components/ProfileCard';
 import './App.css';
-import Sidebar from './Sidebar';
+
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);

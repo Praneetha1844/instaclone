@@ -18,8 +18,8 @@ function ExplorePage() {
 
   return (
     <div className="ml-[20.6667%] justify-center">
-      <div className="border border-black p-4">
-        <h2 className="text-center text-xl font-bold mb-4">Explore Videos</h2>
+      <div className="border border-white p-4">
+       
         <div className="grid grid-cols-3 grid-rows-3 gap-4">
           {videoSources.map((video, index) => (
             <div
